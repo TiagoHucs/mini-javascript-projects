@@ -1,0 +1,32 @@
+
+<style>
+    body{
+        background-color: black;
+        color: white;
+    }
+</style>
+<body>
+        <h1>Já tomei o remédio?</h1>
+        <hr>
+        <div id="resposta">Não sei</div>
+</body>
+
+<script>
+
+    var tomou = false;
+    atualizaHtml();
+    
+    function salvar(){
+        tomou = true;
+        atualizaHtml();
+    }
+    
+    function atualizaHtml(){
+        if(tomou){
+            document.getElementById('resposta').innerHTML =  "<div>Sim</div>";
+        } else {
+            document.getElementById('resposta').innerHTML =  "<div>Não</div><br><button onclick=\"salvar()\">Tomar agora</button>";
+        }
+    }
+
+    </script>
