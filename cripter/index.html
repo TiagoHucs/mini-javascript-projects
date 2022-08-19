@@ -1,55 +1,43 @@
-<script>
-
-function executar(){
-    var pass = document.getElementById('pass').value;
-    var key = document.getElementById('key').value;
-
-    document.getElementById('result').innerHTML = '<li>Pass: '+ pass + '</li>';
-    document.getElementById('result').innerHTML += '<li>Key: '+ key + '</li>';
-    document.getElementById('result').innerHTML += '<li>Alternated: '+ alternate(pass,key) + '</li>';
-    document.getElementById('result').innerHTML += '<li>Cripted: '+ cript(alternate(pass,key)) + '</li>';
-}
-
-function alternate(txt,key){
-
-    var array1 = txt.split('');
-    var array2 = key.split('');
-    var result = ''
-
-    for(i = 0; i< (array1.length + array2.length);i++){
-        if(array1[i])
-            result+=array1[i];
-        if(array2[i])
-            result+=array2[i];
-    }
-
-    return result
-}
-
-function cript(txt){
-    return btoa(txt);
-}
-
-function decript(txt){
-    return atob(txt);
-}
-
-</script>
-
-<h1>Resultado</h1>
-
-<label>Pass:</label>
-<input id="pass" type="text" value="123456"/>
-
-<label>Key:</label>
-<input id="key" type="text" value="abcdefgh"/>
-
-<button onclick="executar()">Criptografar</button>
-
-<hr>
-
-<h1>Resultado</h1>
-
-<ul>
-    <pan id="result"></pan>
-</ul>
+<html>
+    <head>
+        <title>Gera senha</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+    <body class="container">
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+                <div class="text-center">
+                    <h1>Gera senha</h1>
+                </div>
+                <div class="form-group">
+                    <label for="password">Senha:</label>
+                    <input id="pass" type="password" class="form-control" placeholder="Enter sua senha simples" value="123456" />
+                </div>
+                <div class="form-group">
+                    <label for="password">Chave:</label>
+                    <input id="key" type="password" class="form-control" placeholder="Entre com uma chave" value="abcdefgh" />
+                </div>
+                <div class="btn btn-block btn-success" onclick="executar()">Criptografar</div>
+                <hr>
+        
+                <hr>
+                <div class="text-center">
+                    <h1>Resultado</h1>
+                </div>
+                <ul>
+                    <pan id="result"></pan>
+                </ul>
+                <input id="passCripted" class="form-control"/>
+                <div class="btn btn-block btn-success" onclick="copiarTexto()">Copiar</div>
+                
+            </div>
+            <div class="col-sm-3"></div>
+          </div>
+        
+    </body>
+</html>
