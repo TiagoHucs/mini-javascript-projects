@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <title>Fighting Game using Javascript</title>
+
+    <!--JS Files-->
+    <script src="js/utils.js" defer ></script>
+    <script src="js/classes.js" defer ></script>
+    <script src="index.js" defer ></script>
+    <!--Style-->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div class="container">
+    <div class="instruction">
+        <h4>Player 1 Control</h4>
+        <div><b>Jump: </b>W</div>
+        <div><b>Move Left: </b>A</div>
+        <div><b>Move Right: </b>D</div>
+        <div><b>Attack: </b>Space</div> 
+    </div>
+    <div class="game-container">
+
+        <!--Health Bar-->
+        <div id="healthBar">
+            
+            <!--Player Health-->
+            <div class="player-health-container">
+                <div class="player-health-red"></div>
+                <div id="playerHealth"></div>
+            </div>
+            <!--Timer-->
+            <div id="timer" >  </div>
+            <!--Enemy Health-->
+            <div class="enemy-health-container">
+                <div class="enemy-health-red"></div>
+                <div id="enemyHealth"></div>
+            </div>
+        </div>
+        <div id="displayResult" >Tied</div>
+        <canvas></canvas>
+    </div>
+    <div class="instruction">
+        <h4>Player 2 Control</h4>
+        <div><b>Jump: </b>Up Arrow</div>
+        <div><b>Move Left: </b>Left Arrow</div>
+        <div><b>Move Right: </b>Rigth Arrow</div>
+        <div><b>Attack: </b>0</div>        
+    </div>
+</div>
+    <!--Animation Of Health-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>

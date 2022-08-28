@@ -50,7 +50,7 @@ const chao = {
     }
 }
 
-
+//////////
 function loop() {
     chao.desenha();
     hero.desenha();
@@ -58,3 +58,6 @@ function loop() {
 }
 
 loop();
+
+//////////
+
