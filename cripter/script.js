@@ -6,7 +6,7 @@ function executar(){
 
     document.getElementById('result').innerHTML = '<li>Pass: '+ pass + '</li>';
     document.getElementById('result').innerHTML += '<li>Key: '+ key + '</li>';
-    document.getElementById('result').innerHTML += '<li>Alternated: '+ alternate(pass,key) + '</li>';
+   //document.getElementById('result').innerHTML += '<li>Alternated: '+ alternate(pass,key) + '</li>';
     passCripted = cript(alternate(pass,key))
     document.getElementById('result').innerHTML += '<li>Cripted: '+ cript(alternate(pass,key)) + '</li>';
 
